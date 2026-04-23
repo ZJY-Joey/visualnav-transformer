@@ -1,0 +1,118 @@
+input_dir: /media/zjy/Elements SE/11111/UED_FLOW/recon_dataset/recon_release
+num_files_processed: 11836
+config:
+  sampling:
+    horizon: 4
+    discount: 0.9
+  thresholds:
+    linear_velocity_cmd_min: 0.05
+    angular_velocity_cmd_min: 0.05
+    position_expected_min: 0.05
+    yaw_position_expected_min: 0.05
+  constants:
+    position_command_scale: 1.0
+    yaw_command_scale: 1.0
+  epsilons:
+    velocity: 1.0e-06
+    angular_velocity: 1.0e-06
+    position: 1.0e-06
+    yaw_position: 1.0e-06
+  clips:
+    vel_term_max: 5.0
+    angvel_term_max: 5.0
+    pos_term_max: 5.0
+    yawpos_term_max: 5.0
+    z_step_max: 10.0
+  weights:
+    linear_velocity: 1.0
+    angular_velocity: 0.5
+    position: 0.1
+    yaw_position: 0.2
+vel_term:
+  count: 2257596
+  mean: 0.03814597427845001
+  std: 0.05777876451611519
+  min: 8.198806078496546e-09
+  max: 5.0
+  q50: 0.02661646157503128
+  q90: 0.07560369372367859
+  q95: 0.10194002836942673
+  q99: 0.22657562792301178
+angvel_term:
+  count: 2257596
+  mean: 0.22623227536678314
+  std: 0.31410136818885803
+  min: 1.4378208255607397e-16
+  max: 5.0
+  q50: 0.12554828822612762
+  q90: 0.518701434135437
+  q95: 0.7335711717605591
+  q99: 1.568441390991211
+pos_term:
+  count: 2257596
+  mean: 0.0717991441488266
+  std: 0.00408520782366395
+  min: 1.4064058806440016e-09
+  max: 0.1983634978532791
+  q50: 0.07215821743011475
+  q90: 0.07499036192893982
+  q95: 0.07589832693338394
+  q99: 0.07755042985081671
+yawpos_term:
+  count: 2257596
+  mean: 0.14439745247364044
+  std: 0.03995538502931595
+  min: 0.0
+  max: 1.2077299356460571
+  q50: 0.15102660655975342
+  q90: 0.17934881150722504
+  q95: 0.18887169659137726
+  q99: 0.19773070514202118
+z:
+  count: 564399
+  mean: 1.6537963151931763
+  std: 0.5966047048568726
+  min: 6.0904720157850534e-05
+  max: 14.519563674926758
+  q50: 1.5383546352386475
+  q90: 2.3692160606384283
+  q95: 2.731874704360961
+  q99: 3.7579360103607176
+sample_level_risk_ratio:
+  risky_count: 8850
+  total_count: 564399
+  ratio: 0.015680396315372637
+trajectory_level_risk_ratio:
+  count: 11055
+  mean: 0.0647406280040741
+  std: 0.14603130519390106
+  min: 0.0
+  max: 1.0
+  q50: 0.020408162847161293
+  q90: 0.1428571492433548
+  q95: 0.25
+  q99: 1.0
+z_risk:
+  count: 8850
+  mean: 1.7032045125961304
+  std: 0.6367310881614685
+  min: 7.165910938056186e-05
+  max: 9.309744834899902
+  q50: 1.5790436267852783
+  q90: 2.45053927898407
+  q95: 2.831694972515104
+  q99: 3.9991192650795018
+z_safe:
+  count: 555549
+  mean: 1.653009295463562
+  std: 0.5959104299545288
+  min: 6.0904720157850534e-05
+  max: 14.519563674926758
+  q50: 1.5377774238586426
+  q90: 2.3676483631134033
+  q95: 2.730416822433471
+  q99: 3.7523030948638922
+z_to_R_classification:
+  auroc: 0.5232246544577023
+  auprc: 0.017075947082140743
+  positive_rate: 0.015680396315372637
